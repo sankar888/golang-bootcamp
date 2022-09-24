@@ -1,4 +1,6 @@
-package functiondemo
+package main
+
+import "fmt"
 
 //Entrypoint function - main function in main package should have no argument and return type
 
@@ -15,6 +17,11 @@ func mul(x int, y int) float32 {
 	return x * y
 }
 */
+
+func main() {
+	fmt.Println(add(2, 3))
+	mul(3, 5)
+}
 
 //This will work as the return is changed to float32 type
 func mul(x int, y int) float32 {
