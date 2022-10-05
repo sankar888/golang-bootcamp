@@ -16,7 +16,7 @@ func main() {
 	common.End()
 
 	common.Start("**Unknown 123**")
-	applySafeStyle(99) // This would produce a invalid style, if the client systems use it improper
+	applySafeStyle(99) // panic: Invalid Style Combination
 	common.End()
 }
 

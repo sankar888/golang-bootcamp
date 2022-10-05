@@ -10,14 +10,16 @@ func main() {
   - operators (+, -, *, /)
 */
 
+type tokenType int8
+
 const (
-	operand int8 = iota
+	operand tokenType = iota + 1
 	operator
 )
 
 type token struct {
 	data  float64
-	ttype int8
+	ttype tokenType
 }
 
 func (t *token) isOperand() bool {
@@ -36,12 +38,22 @@ func (t *token) getOperator() byte {
 	return byte(t.data)
 }
 
+type state int8
+
 // State
 const (
-	completeOperand int8 = iota
-	//TODO: Effective use of constants and enums in golang
+	makeOperand state = iota + 1
+	makeOperator
+	tokenize
 )
 
-func tokenize(expression string) []token {
+type queue struct {
+	//TODO: create queue datastructure
+}
+
+func tokenizeExp(expression string) []token {
+	//length := len(expression)
+	//var tokens []token = make([]token, length)
+
 	return nil
 }

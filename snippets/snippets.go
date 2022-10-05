@@ -31,10 +31,6 @@ func (t *token) getOperator() byte {
 }
 
 func tokenize(expression string) []token {
-	length := len(expression)
-	var tokens []token = make([]token, length)
-	for i := 0; i < length; i++ {
-
-	}
+	return nil
 
 }
