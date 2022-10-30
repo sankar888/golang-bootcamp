@@ -1,0 +1,65 @@
+[33mcommit 96301532800f14e11b7198f29ffbbe85cfc8785c[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: sankar <iamsankar888@gmail.com>
+Date:   Wed Oct 5 21:36:12 2022 +0530
+
+    constants
+
+[33mcommit 50b7b887ccd926bc5931eb972cb7b86a578ad1d3[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: sankar <iamsankar888@gmail.com>
+Date:   Wed Oct 5 19:17:39 2022 +0530
+
+    started calculator app
+
+[33mcommit ab82b8aad7558d0a8039e25b2f949aa89886891c[m
+Author: sankar <iamsankar888@gmail.com>
+Date:   Sat Oct 1 21:32:40 2022 +0530
+
+    arrays and anon functions
+
+[33mcommit d33ade5018d3164e832eb041db2985033149781c[m
+Author: sankar <iamsankar888@gmail.com>
+Date:   Fri Sep 30 16:04:32 2022 +0530
+
+    coding problems
+
+[33mcommit c2e36c6fd78836a2a7df13f4a0fc8044bfcd4dd7[m
+Author: sankar <iamsankar888@gmail.com>
+Date:   Sat Sep 24 17:32:53 2022 +0530
+
+    understood log package in go
+
+[33mcommit 4da103779ef2a77f471def06c0571c6667d00f23[m
+Author: sankar <iamsankar888@gmail.com>
+Date:   Fri Sep 23 20:25:59 2022 +0530
+
+    Control statements in go
+
+[33mcommit 74e31606d0eab088c40be4a635b7ba4b45d5aff5[m
+Author: sankar <iamsankar888@gmail.com>
+Date:   Fri Sep 23 12:16:03 2022 +0530
+
+    Added loops demo
+
+[33mcommit 418792fc36534f3c7623e7fbf712e739ffed6771[m
+Author: sankar <iamsankar888@gmail.com>
+Date:   Thu Sep 22 22:21:55 2022 +0530
+
+    added pointers demo
+
+[33mcommit 8149b2b01dcd3c41a2db9845481776aa7178ae25[m
+Author: sankar <iamsankar888@gmail.com>
+Date:   Tue Sep 20 23:23:38 2022 +0530
+
+    added functiondemo package
+
+[33mcommit 775606d3acc3350b371b03db8c77f86088defede[m
+Author: A <sankaranarayanan.a@nokia.com>
+Date:   Tue Sep 20 20:57:28 2022 +0530
+
+    go setup
+
+[33mcommit efadb37afdd0871bb6e8b131e977444969f8143f[m
+Author: Sankara Narayanan <iamsankar888@gmail.com>
+Date:   Thu Sep 15 18:44:21 2022 +0530
+
+    Initial commit

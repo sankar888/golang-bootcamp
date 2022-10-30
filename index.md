@@ -27,3 +27,10 @@ A Introductory course to Go language
 7. [Go Introductory Freecourseware video](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=348s)
 8. [Logging Frameworks in go](https://blog.logrocket.com/5-structured-logging-packages-for-go/)
 9. [Best Use of Go panics](https://pkg.go.dev/encoding/json#section-sourcefiles)
+10.[Use of Pointers vs Copy](https://www.ardanlabs.com/blog/2017/06/design-philosophy-on-data-and-semantics.html)
+
+### Commands
+```
+#Run benchmarks
+go test -benchmem -run=^$ -bench . github.com/sankar888/golang-bootcamp/codingproblems/leetcode/medium
+```
