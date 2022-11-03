@@ -64,15 +64,27 @@ var tcases = []struct {
 	in  string
 	out int
 }{
+	{"abc", 3},
 	{"aabca", 3},
 	{"bbbb", 1},
 	{"abadefg", 6},
-	{"abc", 3},
 }
 
 func TestLengthOfLongestSubstring(t *testing.T) {
 	for _, tcase := range tcases {
 		out := lengthOfLongestSubstring(tcase.in)
+		if tcase.out == out {
+			t.Logf("TC passed: inp: %s, expected: %d, actual : %d \n", tcase.in, tcase.out, out)
+		} else {
+			t.Errorf("TC Failed: inp: %s, expected: %d, actual : %d \n", tcase.in, tcase.out, out)
+		}
+
+	}
+}
+
+func TestLengthOfLongestSubstringSol1(t *testing.T) {
+	for _, tcase := range tcases {
+		out := lengthOfLongestSubstringSol1(tcase.in)
 		if tcase.out == out {
 			t.Logf("TC passed: inp: %s, expected: %d, actual : %d \n", tcase.in, tcase.out, out)
 		} else {
