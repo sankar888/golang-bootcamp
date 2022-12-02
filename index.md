@@ -16,6 +16,10 @@ A Introductory course to Go language
 9. What is the use of make and New/new keywords in Go ?
 10. What is Panic in Go ?
 11. Understand How to use flages with binary operation in Go. Check log package for Reference.
+12. What is the purpose of having different error types in Go, it if doesn't have error handling. Common pattern for error handling ?
+13. Whart is DefaultServerMux and how are patterns matched in http server handler functions ?
+14. What is Unwrap in errors packge ? how it is used ?
+15. What is init() function in golang ?
 
 ### Resources / Links
 1. [Go Official website](https://go.dev/)
