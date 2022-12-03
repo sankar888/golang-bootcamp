@@ -20,6 +20,9 @@ A Introductory course to Go language
 13. Whart is DefaultServerMux and how are patterns matched in http server handler functions ?
 14. What is Unwrap in errors packge ? how it is used ?
 15. What is init() function in golang ?
+16. Learn about go signals and use it.
+17. What is Stringers in golang ?
+18. Understand and implement a go pipeine. use the pattern from here [go-pipelines](https://go.dev/blog/pipelines)
 
 ### Resources / Links
 1. [Go Official website](https://go.dev/)
@@ -32,6 +35,8 @@ A Introductory course to Go language
 8. [Logging Frameworks in go](https://blog.logrocket.com/5-structured-logging-packages-for-go/)
 9. [Best Use of Go panics](https://pkg.go.dev/encoding/json#section-sourcefiles)
 10.[Use of Pointers vs Copy](https://www.ardanlabs.com/blog/2017/06/design-philosophy-on-data-and-semantics.html)
+11.[go-code-examples](https://golang.hotexamples.com/)
+12.[go-pieplines](https://go.dev/blog/pipelines)
 
 ### Commands
 ```
