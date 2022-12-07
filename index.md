@@ -23,6 +23,8 @@ A Introductory course to Go language
 16. Learn about go signals and use it.
 17. What is Stringers in golang ?
 18. Understand and implement a go pipeine. use the pattern from here [go-pipelines](https://go.dev/blog/pipelines)
+19. Why time package recommends to pass time as value not as pointers ?
+20. What is receive only and send only channel ?
 
 ### Resources / Links
 1. [Go Official website](https://go.dev/)

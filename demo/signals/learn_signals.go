@@ -21,7 +21,7 @@ func main() {
 		fmt.Println("inside go routine. waiting for 2 sec.")
 		time.Sleep(time.Second * 2)
 		signal.Reset() //reset all signals. No furhther signals will be caught
-		//signal.Stop(ch)
+		//signal.Stop(ch) //this will clear 
 		fmt.Println("stopped the signals channel. this should unblock any wait.")
 	}()
 
