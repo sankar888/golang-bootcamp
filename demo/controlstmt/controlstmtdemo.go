@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"runtime"
+	"time"
 
 	"github.com/sankar888/golang-bootcamp/demo/common"
 )
@@ -15,6 +16,9 @@ func main() {
 	basicSwitch()
 	switchWithNoCondition()
 	switchExecutionOrder()
+	switchWithMultipleCase()
+	switchWithMultipleCorrectCase()
+	switchWithFallthrough()
 }
 
 // basic if
@@ -118,3 +122,52 @@ func change(p *int, newval int) bool {
 	*p = newval
 	return false
 }
+
+func switchWithMultipleCase() {
+	common.Start("Switch with same logic for multiple cases")
+	switch today := time.Now().Weekday(); today {
+	case time.Sunday, time.Saturday: //multiple case points to same logic
+		fmt.Printf("today is %s. No work!\n", today)
+	default:
+		fmt.Printf("today is %s, Have to work\n", today)
+	}
+	common.End()
+}
+
+
+// switch will evaluate the cases in the order they appear, from top to bottom and executes the first matched case. other cases are not evaluated
+func switchWithMultipleCorrectCase() {
+	common.Start("Multiple correct switch case")
+	switch bugs := 10; {
+	case bugs > 3:
+		fmt.Printf("bugs %d is > 3\n", bugs)
+	case fact() && bugs > 5: //since the first case is true the remaining cases are not evaluated
+		fmt.Printf("bugs %d is > 5\n", bugs)
+	}
+	common.End()
+}
+
+func fact() bool {
+	fmt.Println("this function will always return true")
+	return true
+}
+
+// switch will evaluate the cases in the order they appear, from top to bottom and executes the first matched case. other cases are not evaluated
+// but we have special fallthrough statment which passes the control to next case
+// fallthrough cannot be used with a type switch
+// fallthrough will execute the body of the next case, no checking that next case for a match!
+func switchWithFallthrough() {
+	common.Start("Switch with pass through")
+	switch bugs := 10; {
+	case bugs > 3:
+		fmt.Printf("bugs %d is > 3\n", bugs)
+		fallthrough //fallthrough passes the control to the body of the next case without evaluating the case expression
+					//fallthrough should be the last line of the case body
+	case fact() && bugs > 5: //this case expression will not be evaluated, but the case boday will be executed.
+		fmt.Printf("bugs %d is > 5\n", bugs)
+	default:
+		fmt.Println("default case.")	
+	}
+	common.End()
+}
+
