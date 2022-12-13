@@ -3,6 +3,8 @@ package codingproblems
 import (
 	"fmt"
 	"time"
+	"context"
+	"sync"
 )
 
 type chopstick chan int
@@ -17,7 +19,7 @@ type philosopher struct {
 	name  string
 	left  chopstick
 	right chopstick
-	ate   int
+	food   int
 }
 
 func NewPhilosopher(name string, left chopstick, right chopstick) *philosopher {
@@ -28,7 +30,8 @@ func NewPhilosopher(name string, left chopstick, right chopstick) *philosopher {
 	}
 }
 
-func (p *philosopher) eat() {
+func (p *philosopher) eat(ctx context.Context, wg *sync.WaitGroup) {
+	loop:
 	for {
 		select {
 		case <-p.left:
@@ -36,8 +39,8 @@ func (p *philosopher) eat() {
 			select {
 			case <- p.right:
 				for i := 0; i < 10; i++ {
-					p.ate += 1
-					fmt.Printf("%s acquired both left and right. Eating.. %d\n", p.name, p.ate)
+					p.food += 1
+					fmt.Printf("%s acquired both left and right. Eating.. %d\n", p.name, p.food)
 				}
 				p.right <- 1
 				p.left <- 1
@@ -51,8 +54,8 @@ func (p *philosopher) eat() {
 			select {
 			case <- p.left:
 				for i := 0; i < 10; i++ {
-					p.ate += 1
-					fmt.Printf("%s acquired both left and right. Eating.. %d\n", p.name, p.ate)
+					p.food += 1
+					fmt.Printf("%s acquired both left and right. Eating.. %d\n", p.name, p.food)
 				}
 				p.right <- 1
 				p.left <- 1
@@ -60,8 +63,18 @@ func (p *philosopher) eat() {
 				fmt.Printf("%s acquired right waited 200ms for left to be available. trying again.\n", p.name)
 				p.right <- 1
 			}
+
 		case <-time.After(time.Second): //wait for sometime either right or left to be available
 			fmt.Printf("%s waited 1s for left or right to be available. trying again.\n", p.name)
+
+		case <-ctx.Done():
+			fmt.Printf("%s Done eating. exiting.\n", p.name)
+			wg.Done()
+			break loop
 		}
 	}
+}
+
+func (p *philosopher) ate() int {
+	return p.food
 }

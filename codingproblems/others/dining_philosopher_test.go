@@ -3,6 +3,8 @@ package codingproblems
 import (
 	"testing"
 	"time"
+	"context"
+	"sync"
 )
 
 func TestDiningPhilosophers(t *testing.T) {
@@ -18,12 +20,15 @@ func TestDiningPhilosophers(t *testing.T) {
 	var p4 *philosopher = NewPhilosopher("p4", c4, c5)
 	var p5 *philosopher = NewPhilosopher("p5", c5, c1)
 	
-	go p1.eat()
-	go p2.eat()
-	go p3.eat()
-	go p4.eat()
-	go p5.eat()
+	ctx, _ := context.WithTimeout(context.Background(), time.Second * 30)
+	var wg sync.WaitGroup
+	wg.Add(5)
+	go p1.eat(ctx, &wg)
+	go p2.eat(ctx, &wg)
+	go p3.eat(ctx, &wg)
+	go p4.eat(ctx, &wg)
+	go p5.eat(ctx, &wg)
+	wg.Wait()
 
-	
-
+	t.Logf("p1 : %d, p2 : %d, p3 : %d, p4 : %d, p5 : %d\n", p1.ate(), p2.ate(), p3.ate(), p4.ate(), p5.ate())
 }
