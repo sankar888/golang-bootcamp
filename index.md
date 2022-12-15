@@ -36,11 +36,12 @@ A Introductory course to Go language
 7. [Go Introductory Freecourseware video](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=348s)
 8. [Logging Frameworks in go](https://blog.logrocket.com/5-structured-logging-packages-for-go/)
 9. [Best Use of Go panics](https://pkg.go.dev/encoding/json#section-sourcefiles)
-10.[Use of Pointers vs Copy](https://www.ardanlabs.com/blog/2017/06/design-philosophy-on-data-and-semantics.html)
-11.[go-code-examples](https://golang.hotexamples.com/)
-12.[go-pieplines](https://go.dev/blog/pipelines)
-13.[go-switch-statement-patterns](https://yourbasic.org/golang/switch-statement/)
-
+10. [Use of Pointers vs Copy](https://www.ardanlabs.com/blog/2017/06/design-philosophy-on-data-and-semantics.html)
+11. [go-code-examples](https://golang.hotexamples.com/)
+12. [go-pieplines](https://go.dev/blog/pipelines)
+13. [go-switch-statement-patterns](https://yourbasic.org/golang/switch-statement/)
+14. [sorting-in-golang](https://yourbasic.org/golang/how-to-sort-in-go/)
+15. [dynamic-programming](https://www.youtube.com/watch?v=oBt53YbR9Kk)
 ### Commands
 ```
 #Run benchmarks
