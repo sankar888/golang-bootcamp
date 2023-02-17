@@ -21,7 +21,7 @@ func basicLoop() {
 	var sum int
 	for i := 0; i < 10; i++ { //braces are mandatory
 		//long declaration like var i int = 0 is not allowed in for loop initialization
-		//this is by design to amke initializations simple
+		//this is by design to make initializations simple
 		sum += i
 	}
 	fmt.Println(sum)
