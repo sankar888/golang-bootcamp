@@ -6,7 +6,7 @@ import (
 )
 
 // Channels are a typed conduit through which you can send and receive values with the channel operator, <-.
-// Data flows in the direction of the operatoe <-
+// Data flows in the direction of the operator <-
 // By default, sends and receives block until the other side is ready.
 // This allows goroutines to synchronize without explicit locks or condition variables.
 func TestChannelsBasicUsage(t *testing.T) {
@@ -46,7 +46,7 @@ func TestChannelDeadlock(t *testing.T) {
 
 // The below test illustrates that chnnels are like queues (not like a broadcast).
 // the received data is taken out of channels
-// channels will not act like a brodcast write once read many. 
+// channels will not act like a brodcast write once read many.
 func TestChannelsWithMultipleRoutines(t *testing.T) {
 	t.Log("main program starts.")
 
@@ -54,15 +54,15 @@ func TestChannelsWithMultipleRoutines(t *testing.T) {
 	for i := 0; i < 10; i++ {
 		go func(num int) {
 			t.Log("go routine", num, "started. but waiting for start signal")
-			<- signal //will block until some one sends something
+			<-signal //will block until some one sends something
 			t.Logf("go routine %d ends. \n", num)
 		}(i)
 	}
 
 	time.Sleep(time.Second * 2) //wait for some time before starting all routines
-	signal <- 200 //channels are like pipe, since we have sent only one 200 , only one go routine will pick it up and run
+	signal <- 200               //channels are like pipe, since we have sent only one 200 , only one go routine will pick it up and run
 	t.Log("sig <- 200. starts all go routine")
-	close(signal) //closing the channel act like a broadcast, all routines will unblock
+	close(signal)               //closing the channel act like a broadcast, all routines will unblock
 	time.Sleep(time.Second * 3) //wait for some time for all routines to complete
 	t.Log("main program ends.")
 }
