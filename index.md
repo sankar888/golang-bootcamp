@@ -25,6 +25,7 @@ A Introductory course to Go language
 18. Understand and implement a go pipeine. use the pattern from here [go-pipelines](https://go.dev/blog/pipelines)
 19. Why time package recommends to pass time as value not as pointers ?
 20. What is receive only and send only channel ?
+21. study == and != in golang, https://medium.com/golangspec/equality-in-golang-ff44da79b7f1. How it is different between simple types and complex types ?
 
 ### Resources / Links
 1. [Go Official website](https://go.dev/)

@@ -1,0 +1,346 @@
+[
+ {
+  "name": "samples_count",
+  "type": [
+   "null",
+   "integer"
+  ],
+  "default": null
+ },
+ {
+  "name": "period",
+  "type": [
+   "null",
+   "long"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_device_associations",
+  "type": [
+   "null",
+   "integer"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_avg_packets",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_avg_throughput",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_avg_packetssent",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_avg_packetsreceived",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_avg_errorrate",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_avg_txpower",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_min_txpower",
+  "type": [
+   "null",
+   "integer"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_max_txpower",
+  "type": [
+   "null",
+   "integer"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_avg_retransmissionrate",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_avg_signalstrength_dbm",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_min_signalstrength_dbm",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_max_signalstrength_dbm",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_ds_data_volume_mb",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_us_data_volume_mb",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_avg_assocdevice_txbitrate_mbps",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_max_assocdevice_txbitrate_mbps",
+  "type": [
+   "null",
+   "integer"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_min_assocdevice_txbitrate_mbps",
+  "type": [
+   "null",
+   "integer"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_avg_assocdevice_rxbitrate_mbps",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_max_assocdevice_rxbitrate_mbps",
+  "type": [
+   "null",
+   "integer"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_min_assocdevice_rxbitrate_mbps",
+  "type": [
+   "null",
+   "integer"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_avg_assocdevice_snr_db",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_max_assocdevice_snr_db",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_min_assocdevice_snr_db",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_connection_signal_score_2.4ghz",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_connection_signal_score_5ghz",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_connection_coverage_score_2.4ghz",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_connection_coverage_score_5ghz",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_connection_congestion_score_2.4ghz",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_connection_congestion_score_5ghz",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_connection_noise_score_2.4ghz",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_connection_noise_score_5ghz",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_connection_quality_score_2.4ghz",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_connection_quality_score_5ghz",
+  "type": [
+   "null",
+   "double"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_signalstrength_observation",
+  "type": [
+   "null",
+   "string"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_retransmissionerrorrate_observation",
+  "type": [
+   "null",
+   "string"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_performance_observation",
+  "type": [
+   "null",
+   "string"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_associations_observation",
+  "type": [
+   "null",
+   "string"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_connection_quality_observation",
+  "type": [
+   "null",
+   "string"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_connection_signal_observation",
+  "type": [
+   "null",
+   "string"
+  ],
+  "default": null
+ },
+ {
+  "name": "wifi_coverage_observation",
+  "type": [
+   "null",
+   "string"
+  ],
+  "default": null
+ }
+]

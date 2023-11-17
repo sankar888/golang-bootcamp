@@ -3,18 +3,13 @@
 // golang io is to be leared with os and net package. Detailed learning and examples are provided in separate files
 package iobasics
 
-
-import (
-	"testing"
-)
-
 /*
  Q: I/O is basically about read and write to various sources and sinks. What sunc sources are available for I/O ?
  A: Primary sources/sinks involve Filesystem, Network - tcp / udp port, Linux socket.
- 
+
  Q: What is the basic abstraction for reading and writing from various sources ?
  A: golang io package introduces basic interfaces which defines the basic abstraction of io. The basic Abstractions are
-    
+
 type Reader interface {
 	Read(p []byte) (n int, err error)
 }

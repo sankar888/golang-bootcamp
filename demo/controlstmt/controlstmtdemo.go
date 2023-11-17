@@ -104,7 +104,7 @@ func switchWithNoCondition() {
 
 func switchExecutionOrder() {
 	common.Start("**Switch with NoCondition Demo**")
-	i := 72 //initial value of i
+	i := 12 //initial value of i
 	switch {
 	case change(&i, 31) && i >= 1 && i <= 10: //All switch cases are evaluated in the order they appear, All three cases are evaluated before going to default
 		fmt.Printf("%v is in Range 1 .. 10 \n", i)
@@ -134,7 +134,6 @@ func switchWithMultipleCase() {
 	common.End()
 }
 
-
 // switch will evaluate the cases in the order they appear, from top to bottom and executes the first matched case. other cases are not evaluated
 func switchWithMultipleCorrectCase() {
 	common.Start("Multiple correct switch case")
@@ -162,12 +161,11 @@ func switchWithFallthrough() {
 	case bugs > 3:
 		fmt.Printf("bugs %d is > 3\n", bugs)
 		fallthrough //fallthrough passes the control to the body of the next case without evaluating the case expression
-					//fallthrough should be the last line of the case body
+		//fallthrough should be the last line of the case body
 	case fact() && bugs > 5: //this case expression will not be evaluated, but the case boday will be executed.
 		fmt.Printf("bugs %d is > 5\n", bugs)
 	default:
-		fmt.Println("default case.")	
+		fmt.Println("default case.")
 	}
 	common.End()
 }
-

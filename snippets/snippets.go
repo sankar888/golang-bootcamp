@@ -1,9 +1,12 @@
 package snippets
 
 import (
+	"bytes"
 	"errors"
+	"log"
 	"regexp"
 	"strings"
+	"text/template"
 )
 
 // simplify path takes in a filesystem path which can be absolute or relative and
@@ -59,4 +62,13 @@ func Simplify(path string) string {
 	}
 	cparts = cparts[:cpindex]
 	return strings.Join(cparts, "/")
+}
+
+func RenderTemplate(templateStr string, data any) string {
+	t := template.Must(template.New("tmp").Parse(templateStr))
+	var writer bytes.Buffer
+	if err := t.Execute(&writer, data); err != nil {
+		log.Panic(err)
+	}
+	return writer.String()
 }

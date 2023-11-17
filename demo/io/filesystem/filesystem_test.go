@@ -2,16 +2,15 @@
 package filesystem
 
 import (
-	"testing"
-	"os"
 	"errors"
 	"fmt"
 	"io/fs"
 	"log"
+	"os"
+	"testing"
 )
 
-
-//package os has the basic file and directory abstraction
+// package os has the basic file and directory abstraction
 func TestBasicConcepts(t *testing.T) {
 	//create a file and returns *os.File and error
 	err := os.MkdirAll("C:/Users/sankaraa/work/tmp/", os.ModeDir)
@@ -28,7 +27,7 @@ func TestBasicConcepts(t *testing.T) {
 
 func TestStatFunction(t *testing.T) {
 	// check if file exists
-	info, err := os.Stat("/a/b/c"); 
+	info, err := os.Stat("/a/b/c")
 	if err != nil {
 		t.Log("is err is of type os.ErrNotExists?", errors.Is(err, os.ErrNotExist))
 		t.Logf("when it is err, what is info: %v\n", info)
@@ -42,7 +41,7 @@ func TestStatFunction(t *testing.T) {
 	}
 	t.Logf("BaseName: %s, Size: %dKB, lastmodifiedtime: %v, isdirectory: %v\n", info.Name(), info.Size()/1024, info.ModTime(), info.IsDir())
 
-	//is fs.FileInfo got as result of Stat() call pointer? Yes 
+	//is fs.FileInfo got as result of Stat() call pointer? Yes
 	t.Logf("fs of type %T, pointer %p\n", info, info) //info is a pointer
 	callMe(info)
 
@@ -52,8 +51,8 @@ func TestStatFunction(t *testing.T) {
 		t.Error(err)
 	}
 	t.Logf("BaseName: %s, Size: %dKB, lastmodifiedtime: %v, isdirectory: %v\n", info.Name(), info.Size()/1024, info.ModTime(), info.IsDir())
-	t.Logf("Mode of a FileInfo %v\n", info.Mode()) //-rw-rw-rw-
-	t.Logf("What would FileInfo Sys() returns %v\n", info.Sys())//Don't know what is this. skipping for now.
+	t.Logf("Mode of a FileInfo %v\n", info.Mode())               //-rw-rw-rw-
+	t.Logf("What would FileInfo Sys() returns %v\n", info.Sys()) //Don't know what is this. skipping for now.
 }
 
 func TestCreatingFileAndDirectory(t *testing.T) {
@@ -63,8 +62,8 @@ func TestCreatingFileAndDirectory(t *testing.T) {
 		t.Error(err)
 	}
 	//write some contents to the file
-	writetoFile(file, "Hai. Hello. How are u ?")
-	err := file.Sync()
+	writeFile(file, "Hai. Hello. How are u ?")
+	err = file.Sync()
 	if err != nil {
 		t.Error(err)
 	}
@@ -72,7 +71,7 @@ func TestCreatingFileAndDirectory(t *testing.T) {
 	defer file.Close()
 
 	//what if we create the same file another time. the old file will be truncated and new file will be created
-	file, err = os.Create("C:/Users/sankaraa/work/tmp/file_created_by_golang.txt") 
+	file, err = os.Create("C:/Users/sankaraa/work/tmp/file_created_by_golang.txt")
 	if err != nil {
 		t.Error(err)
 	}
@@ -87,7 +86,7 @@ func callMe(info fs.FileInfo) {
 	fmt.Printf("fs of type %T, pointer %p\n", info, info)
 }
 
-func writetoFile(file *os.File, contents string) {
+func writeFile(file *os.File, contents string) {
 	//how to write to a file, using writer
 	_, err := file.WriteString(contents)
 	if err != nil {
