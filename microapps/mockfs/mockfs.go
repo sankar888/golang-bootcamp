@@ -2,8 +2,10 @@
 package mockfs
 
 import (
+	"encoding/json"
 	"errors"
 	"fmt"
+	"json"
 	"regexp"
 	"strings"
 	"time"
